@@ -1,8 +1,8 @@
 {% load static %}
 {% block menu %}
 <nav class="navbar navbar-expand-md navbar-dark bg-dark af">
-    <a class="navbar-brand ab ac" href="{% url 'mainapp:home' %}">Robot's school</a>
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse order-1">
+    	<a class="navbar-brand ab ac" href="{% url 'mainapp:home' %}">Robot's school</a>
         <ul class="navbar-nav mr-auto">
 			
 			<!--
@@ -37,7 +37,11 @@
                 <a class="nav-link" href="/admin/">Админка</a> 
             </li>
             {% endif %}
-            <li class="out">
+		</ul>
+	</div>
+	<div class="collapse navbar-collapse order-3">
+		<ul class="navbar-nav ml-auto">
+            <li class="nav-item">
                 <a class ="nav-link" href="{% url 'logout' %}">Выйти</a>
             </li>
         </ul>
