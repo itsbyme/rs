@@ -1,7 +1,7 @@
 {% load static %}
 {% block menu %}
 <nav class="navbar navbar-expand-md navbar-dark bg-dark af">
-    <a class="navbar-brand ab ac" href="{% url 'mainapp:home' %}">Меню</a>
+    <a class="navbar-brand ab ac" href="{% url 'mainapp:home' %}">Robot's school</a>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
 			
@@ -21,7 +21,7 @@
                 href="{% url 'mainapp:groups' %}">Группы</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {% if request.resolver_match.url_name == 'salary' %} active {% endif %}"
+                <a class="nav-link {% if request.resolver_match.url_name == 'marks' %} active {% endif %}"
                     href="{% url 'mainapp:marks' %}">Отметка группы</a>
             </li>
             <li class="nav-item">
@@ -37,8 +37,8 @@
                 <a class="nav-link" href="/admin/">Админка</a> 
             </li>
             {% endif %}
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'logout' %}">Выйти</a>
+            <li class="out">
+                <a class ="nav-link" href="{% url 'logout' %}">Выйти</a>
             </li>
         </ul>
     </div>
