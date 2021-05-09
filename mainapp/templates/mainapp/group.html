@@ -1,0 +1,61 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block content %}
+<div class="table-responsive">
+    <table class="table table-sm aw">
+        <tbody>
+		    <tr>
+                <td class="au" width="600px">Группа</td>
+                <td width="600px">{{ group.name }}</td>
+		    </tr>
+            <tr>
+                <td class="au">Расписание занятий</td>
+                <td>{{ group.get_shedule }}</td>
+            </tr>
+            <tr>
+                <td class="au">Дата начала</td>
+			    <td>{{ group.create }}</td>
+            </tr>
+            <tr>
+                <td class="au">Дата окончания</td>
+			    <td>{{ group.delete }}</td>
+            </tr>
+			<tr>
+                <td class="au">Преподаватель</td>
+			    <td>{{ group.get_teacher.get_full_name }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="table-responsive">
+    <table  class="table table-striped table-sm ax">
+        <thead class="ag t3">
+            <tr>
+                <th width="400px">Ученики</th>
+                {% for date in group.get_dates %}
+                    <th width="50px">{{ date.date }}</th>
+                {% endfor %}
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for bind in group.get_binds %}
+            <tr>
+                <td><a class="ah" href="{% url 'mainapp:student' bind.sid.id %}">{{ bind.sid.get_full_name }}</a></td>
+                {% for attendance in bind.get_student.get_attendance %}
+                    {% if attendance.did.gid.id == group.id %}
+                        {% if attendance.status %}
+                            <td><img src="{% static 'img/tick.png' %}" alt="tick" height="25"></td>
+                        {% else %}
+                            <td>no</td>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}        
+        </tbody>
+    </table>
+</div>
+<br>
+{% endblock %}

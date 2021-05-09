@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block title %}
+        <title>Robot's school</title>
+    {% endblock %}
+    {% block fonts %}
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600&display=swap" rel="stylesheet">
+    {% endblock %}
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    {% endblock %}
+    {% block js %}
+    {% endblock %}
+</head>
+<body>
+    {% block header %}
+        {% include 'mainapp/include/header.html' %}
+    {% endblock %}
+
+    {% block menu %}
+        {% include 'mainapp/include/menu.html' %}
+    {% endblock %}
+    
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+        {% include 'mainapp/include/footer.html' %}
+    {% endblock %}
+</body>
+</html>

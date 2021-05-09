@@ -1,0 +1,35 @@
+{% extends 'mainapp/base.html' %}
+{% block content %}
+<div class="table-responsive">
+<center>
+{% if state %}
+<form class="form-horizontal" action="{% url 'mainapp:marks' %}" method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input class="btn btn-lg  bj center1" type="submit" value="Отправить">
+</form>
+{% else %}
+	<table class="table table-striped table-sm bh">
+		<thead class="ag t3">
+			<tr>
+				<th width="300px">
+					<div class="bc bf">Ближайшее занятие:</div>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<div class="bf bl">
+						Группа: <a class="ah" href="{% url 'mainapp:group' group.id %}">{{ group.name }}</a>
+					</div>
+					<div class="bf bl">Дата: {{ date.date }}</div>
+					<div class="bf bl">Время: {{ group.get_shedule }}</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+{% endif %}
+</center>
+</div>
+{% endblock %}

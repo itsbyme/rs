@@ -1,0 +1,26 @@
+{% extends 'mainapp/base.html' %}
+
+  {% block menu %}
+  {% endblock %}
+  
+	{% block content %}
+    <!-- <div class="container">
+        <h2 class="header1">Вход в личный кабинет</h2>
+        <label for="inputEmail" class="sr-only col-lg-4">Логин</label>
+        <input type="email" id="inputEmail" class="form-control col-lg-4" placeholder="Логин" required autofocus>
+        <label for="inputPassword" class="sr-only col-lg-4 up1 up">Пароль</label>
+        <input type="password" id="inputPassword" class="form-control col-lg-4 up1 up" placeholder="Пароль" required>
+        <button class="btn btn-lg  a1 center1" type="button">Войти</button>
+      -->
+<div class="container"> 
+  <center>
+    <h2 class="header1">Вход в личный кабинет</h2>
+    <form class="form-horizontal" action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        {{ login_form.username }}
+        {{ login_form.password }}
+        <input class="btn btn-lg  a1 center1" type="submit" value="войти">
+    </form>
+    </center>
+</div>
+{% endblock %}

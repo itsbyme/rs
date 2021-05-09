@@ -1,0 +1,34 @@
+{% extends 'mainapp/base.html' %}
+{% block content %}
+<div class="table-responsive at">
+    <table  class="table table-striped table-sm ao">
+        <thead class="ag">
+            <tr  class="t1">
+                <th width="300px">Дата занятия</th>
+                <th width="300px">Группа</th>
+                <th width="200px">Состояние</th>
+			    <th width="200px">Итого</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for date, group in states %}
+            <tr>
+                <td>{{ date.date }}</td>
+                <td><a class="ah" href="{% url 'mainapp:group' group.id %}">{{ group.name }}</a></td>
+                {% if date.status %}
+                    <td>Проведено</td>
+                    <td>1 000</td>
+                {% else %}
+                    <td>Не проведено</td>
+                    <td>0</td>
+                {% endif %}                
+                
+            </tr>
+            {% endfor %}
+			<tr>
+                <td class="t2 au" colspan="4">Всего за месяц: {{ total }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

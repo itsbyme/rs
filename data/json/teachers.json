@@ -1,0 +1,82 @@
+[
+  {
+    "surname": "Своротнева",
+    "name": "Наталья",
+    "patronymic": "Андреевна",
+    "phone": "89168765432",
+    "username": "nasvorotneva@mail.ru",
+    "password": "maksimmaksim"
+  },
+  {
+    "surname": "Маркелов",
+    "name": "Александр",
+    "patronymic": "Владимирович",
+    "phone": "89168765433",
+    "username": "sasha@mail.ru",
+    "password": "maksim"
+  },
+  {
+    "surname": "Демин",
+    "name": "Данил",
+    "patronymic": "Кириллович",
+    "phone": "89168765434",
+    "username": "dem@mail.ru",
+    "password": "maksim1"
+  },
+  {
+    "surname": "Белоусов",
+    "name": "Даниил",
+    "patronymic": "Михайлович",
+    "phone": "89168765435",
+    "username": "bel@mail.ru",
+    "password": "maksim2"
+  },
+  {
+    "surname": "Телегина",
+    "name": "Елизавета",
+    "patronymic": "Александровна",
+    "phone": "89168765436",
+    "username": "tel@mail.ru",
+    "password": "maksim3"
+  },
+  {
+    "surname": "Сельцина",
+    "name": "Елена",
+    "patronymic": "Алексеевна",
+    "phone": "89168765437",
+    "username": "sel@mail.ru",
+    "password": "maksim4"
+  },
+  {
+    "surname": "Мусихин",
+    "name": "Жан",
+    "patronymic": "Игоревич",
+    "phone": "89168765438",
+    "username": "mys@mail.ru",
+    "password": "maksim5"
+  },
+  {
+    "surname": "Мантуров",
+    "name": "Александр",
+    "patronymic": "Дмитриевич",
+    "phone": "89168765439",
+    "username": "mansasha@mail.ru",
+    "password": "maksim6"
+  },
+  {
+    "surname": "Томашин",
+    "name": "Егор",
+    "patronymic": "Владимирович",
+    "phone": "89168765440",
+    "username": "tom@mail.ru",
+    "password": "maksim7"
+  },
+  {
+    "surname": "Баландин",
+    "name": "Илья",
+    "patronymic": "Викторович",
+    "phone": "89168765441",
+    "username": "bal@mail.ru",
+    "password": "maksim8"
+  }
+]

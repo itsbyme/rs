@@ -1,0 +1,142 @@
+[
+  {
+    "surname": "Иванов",
+    "name": "Иван",
+    "patronymic": "Иванович",
+    "phone": "88005553535",
+    "email": "ivanov55555555555@yandex.ru"
+  },
+  {
+    "surname": "Петров",
+    "name": "Анатолий",
+    "patronymic": "Геннадьевич",
+    "phone": "89135553545",
+    "email": "petrov1987h@yandex.ru"
+  },
+  {
+    "surname": "Пушкин",
+    "name": "Александр",
+    "patronymic": "Сергеевич",
+    "phone": "89161234563",
+    "email": "pushkinas@mail.ru"
+  },
+  {
+    "surname": "Толстой",
+    "name": "Лев",
+    "patronymic": "Николаевич",
+    "phone": "89161234562",
+    "email": "levnt@mail.ru"
+  },
+  {
+    "surname": "Шаталов",
+    "name": "Максим",
+    "patronymic": "Игоревич",
+    "phone": "89161234565",
+    "email": "itsbyme@mail.ru"
+  },
+  {
+    "surname": "Арсентьев",
+    "name": "Дмитрий",
+    "patronymic": "Андреевич",
+    "phone": "89161234566",
+    "email": "arsentiev_da@mail.ru"
+  },
+  {
+    "surname": "Петроченко",
+    "name": "Иван",
+    "patronymic": "Васильевич",
+    "phone": "89161234567",
+    "email": "saintion@mail.ru"
+  },
+  {
+    "surname": "Мирешкин",
+    "name": "Илья",
+    "patronymic": "Андреевич",
+    "phone": "89161234568",
+    "email": "mir@mail.ru"
+  },
+  {
+    "surname": "Денишев",
+    "name": "Вадим",
+    "patronymic": "Эдуардович",
+    "phone": "89161234569",
+    "email": "den@mail.ru"
+  },
+  {
+    "surname": "Диденко",
+    "name": "Владислав",
+    "patronymic": "Андреевич",
+    "phone": "89161234570",
+    "email": "did@mail.ru"
+  },
+  {
+    "surname": "Арутюнян",
+    "name": "Давид",
+    "patronymic": "Арменович",
+    "phone": "89161234571",
+    "email": "arut@mail.ru"
+  },
+  {
+    "surname": "Варданян",
+    "name": "Вартан",
+    "patronymic": "Давидович",
+    "phone": "89161234572",
+    "email": "vard@mail.ru"
+  },
+  {
+    "surname": "Гемпель",
+    "name": "Лев",
+    "patronymic": "Алексеевич",
+    "phone": "89161234573",
+    "email": "lev2@mail.ru"
+  },
+  {
+    "surname": "Волкова",
+    "name": "Мария",
+    "patronymic": "Станиславовна",
+    "phone": "89161234574",
+    "email": "mar@mail.ru"
+  },
+  {
+    "surname": "Ракова",
+    "name": "Варвара",
+    "patronymic": "Игоревна",
+    "phone": "89161234575",
+    "email": "rak@mail.ru"
+  },
+  {
+    "surname": "Пахомов",
+    "name": "Денис",
+    "patronymic": "Андреевич",
+    "phone": "89161234576",
+    "email": "pahom@mail.ru"
+  },
+  {
+    "surname": "Попов",
+    "name": "Артем",
+    "patronymic": "Михеевич",
+    "phone": "89161234577",
+    "email": "pop@mail.ru"
+  },
+  {
+    "surname": "Круглов",
+    "name": "Никита",
+    "patronymic": "Александрович",
+    "phone": "89161234578",
+    "email": "krug@mail.ru"
+  },
+  {
+    "surname": "Вяткин",
+    "name": "Максим",
+    "patronymic": "Романович",
+    "phone": "89161234579",
+    "email": "bytk@mail.ru"
+  },
+  {
+    "surname": "Козлов",
+    "name": "Даниил",
+    "patronymic": "Дмитриевич",
+    "phone": "89161234580",
+    "email": "koz@mail.ru"
+  }
+]

@@ -1,0 +1,118 @@
+body{
+	font-family: 'Comfortaa', cursive;
+}
+html{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+/*первая страница*/
+.header{
+	background:#FFD103;
+	color:#010101;
+	padding-top:10px;
+	height:100px;
+}
+.a1{
+	background:#FFD103;
+	color:#010101;
+	padding-top:10px;
+	height:50px;
+}
+.header2{
+	background:#FFD103;
+	color:#010101;
+	padding-top:10px;
+	height:60px;
+}
+.up{
+	margin-bottom:12px;
+}
+.up1{
+	margin-top:5px;
+}
+.header1{
+	margin-top:120px;
+	margin-bottom: 10px;
+}
+.center1{
+	text-align: center;
+	margin-bottom: 50px;
+}
+.footer{
+	background: #20262C;
+	padding:8px 54px;
+	position: fixed;
+    bottom: 0;
+	
+}
+.credits{
+	color: #fff;
+	font-size:12px;
+	width:400px;
+	margin: auto;
+	text-align: center;}
+.aa{margin-top:30px;}
+.ab{margin-left:120px; margin-right:50px;}
+.ac{font-size:26px;}
+.ad{margin: auto; margin-top:30px; margin-bottom:50px; 
+	width: 900px; border: 3px solid #20262C;}
+.af{height:50px;}
+.ag{font-size:20px;}
+.ah{color:#010101;}
+.ai{margin-left:900px; margin-top:-5px;}
+.aj{margin-top:15px;margin-left:15px;}
+.ak{margin: auto; margin-top:30px; margin-bottom:50px; 
+	width: 1300px; border: 3px solid #20262C;}
+.al{margin-top:10px;font-size:18px;}
+.am{margin: auto; margin-top:10px; margin-bottom:50px; 
+	width: 1300px; border: 3px solid #20262C;}
+.an{margin-left:5px;}
+.ao{margin: auto; margin-top:10px; margin-bottom:50px; 
+	width: 900px; border: 3px solid #20262C;}
+.ap{margin-left:215px;}
+.aq{margin-left:950px;}
+.ar{margin: auto; margin-top:10px; margin-bottom:50px; 
+	width: 1100px; border: 3px solid #20262C;}
+.t1 { 
+padding: 3px;
+	background:#FFD103;
+	border: 2px solid black;
+   }
+.t2 { 
+background:#FFF3BB;
+}
+.t3 { 
+background:#FFD103;
+}
+.holder{
+position:relative;
+width:120px;
+height:50px;
+
+}
+.block{
+position:absolute;
+left:0;
+right:0;
+width:300px;
+height:auto;
+background:#FFD103;
+padding:20px;
+display:none;
+z-index:1;
+}
+.holder:hover .block{
+display:block;
+}
+.as{font-size:20px;
+margin-top:-12px;
+margin-bottom:10px;}
+.at{margin-top:20px;}
+.au{font-size:20px;}
+.av{font-size:24px;}
+.aw{margin-left:150px;margin-top:25px;
+	width: 500px; border: 3px solid #20262C;}
+.ax{margin-left:150px;margin-top:5px; 
+	width: 1000px; border: 3px solid #20262C;}
+.ay{margin-top:5px;margin-left:150px;margin-bottom:50px;}

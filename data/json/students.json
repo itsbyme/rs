@@ -1,0 +1,107 @@
+[
+  {
+    "surname": "Иванов",
+    "name": "Дима",
+    "patronymic": "Иванович",
+    "birthday": "2013-03-14",
+    "pid": 1
+  },
+  {
+    "surname": "Иванова",
+    "name": "Марина",
+    "patronymic": "Ивановна",
+    "birthday": "2013-03-14",
+    "pid": 1
+  },
+  {
+    "surname": "Петров",
+    "name": "Михаил",
+    "patronymic": "Анатольевич",
+    "birthday": "2012-12-17",
+    "pid": 2
+  },
+  {
+    "surname": "Пушкин",
+    "name": "Иван",
+    "patronymic": "Александрович",
+    "birthday": "2016-07-26",
+    "pid": 3
+  },
+  {
+    "surname": "Толстой",
+    "name": "Кирилл",
+    "patronymic": "Львович",
+    "birthday": "2010-11-20",
+    "pid": 4
+  },
+  {
+    "surname": "Шаталов",
+    "name": "Аркадий",
+    "patronymic": "Максимович",
+    "birthday": "2009-02-11",
+    "pid": 5
+  },
+  {
+    "surname": "Шаталов",
+    "name": "Инакентий",
+    "patronymic": "Максимович",
+    "birthday": "2008-08-12",
+    "pid": 5
+  },
+  {
+    "surname": "Шаталова",
+    "name": "Розалия",
+    "patronymic": "Максимовна",
+    "birthday": "2010-06-17",
+    "pid": 5
+  },
+  {
+    "surname": "Петроченко",
+    "name": "Елизавета",
+    "patronymic": "Ивановна",
+    "birthday": "2012-03-24",
+    "pid": 7
+  },
+  {
+    "surname": "Мирешкин",
+    "name": "Александр",
+    "patronymic": "Ильич",
+    "birthday": "2008-01-13",
+    "pid": 8
+  },
+  {
+    "surname": "Диденко",
+    "name": "Елена",
+    "patronymic": "Владиславовна",
+    "birthday": "2013-03-12",
+    "pid": 10
+  },
+  {
+    "surname": "Диденко",
+    "name": "Владимир",
+    "patronymic": "Владиславович",
+    "birthday": "2015-07-24",
+    "pid": 10
+  },
+  {
+    "surname": "Гемпель",
+    "name": "Марина",
+    "patronymic": "Львовна",
+    "birthday": "2012-11-09",
+    "pid": 13
+  },
+  {
+    "surname": "Волков",
+    "name": "Григорий",
+    "patronymic": "Андреевич",
+    "birthday": "2014-08-25",
+    "pid": 14
+  },
+  {
+    "surname": "Раков",
+    "name": "Дмитрий",
+    "patronymic": "Денисович",
+    "birthday": "2016-08-05",
+    "pid": 15
+  }
+]

@@ -1,0 +1,23 @@
+{% extends 'mainapp/base.html' %}
+{% block content %}
+<div class="table-responsive">
+    <table  class="table table-striped table-sm ad">
+        <thead class="ag t3">
+            <tr>
+                <th width="100px">ID</th>
+                <th width="400px">ФИО</th>
+                <th width="400px">Родитель</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student.id }}</td>
+                <td><a class="ah" href="{% url 'mainapp:student' student.id %}">{{ student.get_full_name }}</a></td><!--ссылка на страницу конкретного ребенка-->
+                <td><a class="ah" href="{% url 'mainapp:parent' student.pid.id %}">{{ student.pid.get_full_name }}</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'mainapp/base.html' %}
+{% block content %}
+<div class="table-responsive">
+    <table class="table table-sm aw">
+        <tbody>
+		  	<tr>
+              	<td class="au" width="260px">ФИО</td>
+              	<td width="350px">{{ student.get_full_name }}</td>
+		    </tr>
+            <tr>
+              	<td class="au">ID</td>
+              	<td>{{ student.id }}</td>
+            </tr>
+            <tr>
+              	<td class="au">Дата рождения</td>
+			 	<td>{{ student.birthday }}</td>
+            </tr>
+            <tr>
+				<td class="au">Родитель</td>
+				<td>
+				{% for parent in student.get_parents %}  
+				<a class="ah" href="{% url 'mainapp:parent' parent.id %}">{{ parent.get_full_name }}</a>
+				{% endfor %}
+				</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-sm aw">
+        <tbody>
+		  	<tr>
+              	<td class="au" width="260px">Группы</td>
+			</tr>
+			{% for bind in student.get_binds %}
+            <tr>
+              	<td><a class="ah" href="{% url 'mainapp:group' bind.gid.id %}">{{ bind.gid.name }}</a></td>
+			</tr>
+			{% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

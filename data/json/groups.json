@@ -1,0 +1,112 @@
+[
+  {
+    "name": "lv5.n1.Wedo",
+    "max_students": 8,
+    "day": 1,
+    "time": 1,
+    "subject": "Ведо",
+    "create": "2021-05-01",
+    "delete": "2021-08-01",
+    "tid": 1
+  },
+  {
+    "name": "lv7.n1.Scratch",
+    "max_students": 6,
+    "day": 2,
+    "time": 3,
+    "subject": "Скрэтч",
+    "create": "2021-05-01",
+    "delete": "2021-08-01",
+    "tid": 2
+  },
+  {
+    "name": "lv4.n2.Wedo",
+    "max_students": 6,
+    "day": 3,
+    "time": 5,
+    "subject": "Ведо",
+    "create": "2021-05-01",
+    "delete": "2021-08-01",
+    "tid": 3
+  },
+  {
+    "name": "lv12.n1.Python",
+    "max_students": 8,
+    "day": 4,
+    "time": 2,
+    "subject": "Питун",
+    "create": "2021-05-01",
+    "delete": "2021-08-01",
+    "tid": 4
+  },
+  {
+    "name": "lv13.n1.Python",
+    "max_students": 8,
+    "day": 5,
+    "time": 1,
+    "subject": "Питун",
+    "create": "2021-05-01",
+    "delete": "2021-08-01",
+    "tid": 5
+  },
+  {
+    "name": "lv3.n1.Wedo",
+    "max_students": 10,
+    "day": 6,
+    "time": 3,
+    "subject": "Ведо",
+    "create": "2021-05-01",
+    "delete": "2021-08-01",
+    "tid": 6
+  },
+  {
+    "name": "lv8.n2.Scratch",
+    "max_students": 2,
+    "day": 1,
+    "time": 2,
+    "subject": "Скрэтч",
+    "create": "2021-05-01",
+    "delete": "2021-08-01",
+    "tid": 7
+  },
+  {
+    "name": "lv8.n3.Scratch",
+    "max_students": 2,
+    "day": 3,
+    "time": 8,
+    "subject": "Скрэтч",
+    "create": "2021-05-01",
+    "delete": "2021-08-01",
+    "tid": 8
+  },
+  {
+    "name": "lv9.n2.Wedo",
+    "max_students": 8,
+    "day": 1,
+    "time": 10,
+    "subject": "Скрэтч",
+    "create": "2021-05-01",
+    "delete": "2021-08-01",
+    "tid": 9
+  },
+  {
+    "name": "lv10.n2.Scratch",
+    "max_students": 8,
+    "day": 5,
+    "time": 7,
+    "subject": "Скрэтч",
+    "create": "2021-05-01",
+    "delete": "2021-08-01",
+    "tid": 10
+  },
+  {
+    "name": "lv7.n1.Wedo",
+    "max_students": 8,
+    "day": 2,
+    "time": 4,
+    "subject": "Ведо",
+    "create": "2021-05-01",
+    "delete": "2021-08-01",
+    "tid": 10
+  }
+]

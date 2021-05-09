@@ -1,0 +1,63 @@
+{% extends 'mainapp/base.html' %}
+{% block content %}
+<div class="table-responsive">
+    <table  class="table table-sm aw">
+        <tbody>
+		    <tr>
+                <td class="au" width="150px">ФИО</td>
+                <td width="350px">{{ parent.get_full_name }}</td>
+		    </tr>
+            <tr>
+                <td class="au">ID</td>
+                <td>{{ parent.id }}</td>
+            </tr>
+            <tr>
+                <td class="au">Телефон</td>
+			    <td>{{ parent.phone }}</td>
+            </tr>
+            <tr>
+                <td class="au">e-mail</td>
+			    <td>{{ parent.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-sm aw">
+        <tbody>
+            <tr>
+                <td class="au" width="150px">Дети</td>
+            </tr>
+            {% for student in parent.get_students %}
+            <tr>
+                <td><a class="ah" href="{% url 'mainapp:student' student.id %}">{{ student.get_full_name }}</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped table-sm ax">
+        <thead class="ag t3">
+            <tr>
+                <th width="220px">Дата операции</th>
+                <th width="500px">Сумма списания/пополнения</th>
+			    <th width="400px">ФИО Ребенка</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for payment in payments %}
+            <tr>
+                <td>{{ payment.date }}</td>
+                <td>{% if payment.sum > 0 %}+{% endif %}{{ payment.sum }}</td>
+			    <td>{{ payment.comment }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+	<h3 class="ay">Остаток: {{ parent.get_payment_sum }} рубасов.</h3>
+{% endblock %}
