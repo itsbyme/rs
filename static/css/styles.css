@@ -57,7 +57,7 @@ html{
 .ac{font-size:26px;}
 .ad{margin: auto; margin-top:30px; margin-bottom:50px; 
 	width: 900px; border: 3px solid #20262C;}
-.af{height:50px;}
+.af{height:55px; margin-top: 5px;}
 .ag{font-size:20px;}
 .ah{color:#010101;text-align: center;}
 .ai{margin-left:900px; margin-top:-5px;}
@@ -115,15 +115,16 @@ margin-bottom:10px;}
 .au{font-size:20px;}
 .av{font-size:24px;}
 .aw{
-	margin-left:5px;
+	margin-left:6px;
 	margin-top:25px;
 	width: 500px; 
 	border: 3px solid #20262C;
 }
 
 .ax{
-	margin-top:5px; 
-	width: 100%; 
+	margin-top:5px;
+	margin-left:6px;
+	width: 99%; 
 	border: 3px solid #20262C;
 }
 .ay{margin-top:5px;margin-left:150px;margin-bottom:50px;}
