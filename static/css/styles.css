@@ -114,16 +114,24 @@ margin-bottom:10px;}
 .at{margin-top:20px;}
 .au{font-size:20px;}
 .av{font-size:24px;}
-.aw{margin-left:5px;margin-top:25px;
-	width: 500px; border: 3px solid #20262C;}
-.ax{margin-top:5px; 
-	width: 100%; border: 3px solid #20262C;}
+.aw{
+	margin-left:5px;
+	margin-top:25px;
+	width: 500px; 
+	border: 3px solid #20262C;
+}
+
+.ax{
+	margin-top:5px; 
+	width: 100%; 
+	border: 3px solid #20262C;
+}
 .ay{margin-top:5px;margin-left:150px;margin-bottom:50px;}
 ul li:hover{
 	transform: scale(1.05);
 }
 
-.shedule_table th, .shedule_table td {
+.cell_centered_table th, .cell_centered_table td {
 	text-align: center;
 	vertical-align: middle;
 }
