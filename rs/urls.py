@@ -19,8 +19,8 @@ from django.urls import include, path
 import authapp.views as authapp
 
 urlpatterns = [
-    path('', include('mainapp.urls', namespace='mainapp')),
+    path('', include('mainapp.urls', namespace='main')),
     path('login/', authapp.login, name='login'),
     path('logout/', authapp.logout, name='logout'),
-    path('admin/', admin.site.urls, name='admin'),
+    path('admin/', include('adminapp.urls', namespace='admin')),
 ]

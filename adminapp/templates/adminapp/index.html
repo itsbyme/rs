@@ -1,0 +1,12 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+
+{% block content %}
+	<h3 class="h1">Администрирование сайта</h3>
+	<ul class="navbar">
+		<li><a href="{% url 'admin:groups' %}">Группы</a></li>
+		<li><a href="{% url 'admin:students' %}">Ученики</a></li>
+		<li><a href="{% url 'admin:parents' %}">Родители</a></li>
+		<li><a href="{% url 'admin:teachers' %}">Учителя</a></li>
+	</ul>
+{% endblock %}

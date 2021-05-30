@@ -1,0 +1,27 @@
+{% extends 'adminapp/base.html' %}
+{%load static %}
+
+{% block content %}
+<table>
+	<tbody>
+		<th> 
+			<td> 
+				ID
+      		</td>
+			<td>
+				ФИО
+			</td>
+		</th>
+		{% for student in students %}
+        <tr> 
+          	<td> 
+				{{ student.id }}
+        	</td> 
+			<td>
+				<a href="{% url 'admin:student_update' student.id %}">{{ student.get_full_name }}</a>
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock %}

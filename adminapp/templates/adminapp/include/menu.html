@@ -1,0 +1,19 @@
+{% load static %}
+{% block menu %}
+<nav class="navbar navbar-expand-md navbar-dark af">
+    <div class="collapse navbar-collapse order-1">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'admin:index' %}">Главная</a>
+            </li>
+		</ul>
+	</div>
+	<div class="collapse navbar-collapse order-3">
+		<ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class ="nav-link" href="{% url 'mainapp:home' %}">На сайт</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% endblock %}

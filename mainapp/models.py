@@ -81,8 +81,8 @@ class Group(models.Model):
     day = models.PositiveSmallIntegerField(verbose_name='День')
     time = models.ForeignKey(Time, on_delete=models.CASCADE, verbose_name='Время проведения занятия')
     subject = models.CharField(verbose_name="Предмет", max_length=32)
-    create = models.DateField(verbose_name='Дата создания')
-    delete = models.DateField(verbose_name='Дата распада')
+    create_day = models.DateField(verbose_name='Дата создания')
+    delete_day = models.DateField(verbose_name='Дата распада')
     tid = models.ForeignKey(Teacher, on_delete=models.CASCADE, verbose_name='Преподаватель')
 
     @property

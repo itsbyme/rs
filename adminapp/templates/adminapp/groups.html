@@ -1,0 +1,27 @@
+{% extends 'adminapp/base.html' %}
+{%load static %}
+
+{% block content %}
+<table>
+	<tbody>
+		<th> 
+			<td> 
+				ID
+      		</td>
+			<td>
+				Название
+			</td>
+		</th>
+		{% for group in groups %}
+        <tr> 
+          	<td> 
+				{{ group.id }}
+        	</td> 
+			<td>
+				<a href="{% url 'admin:group_update' group.id %}">{{ group.name }}</a>
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock %}
