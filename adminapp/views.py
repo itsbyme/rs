@@ -127,7 +127,7 @@ def parent_update(request, pk):
     parent = get_object_or_404(models.Parent, pk=pk)
     if request.method == 'POST':
         form = forms.ParentForm(request.POST, request.FILES,
-                                            instance=edit_parent)
+                                            instance=parent)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect(reverse('admin:parent_update',
