@@ -181,7 +181,7 @@ def marks(request):
 
         if not (time and group):
             groups = models.Group.objects.filter(tid=request.user.id)
-            dates = [date for group in groups for date in models.Date.objects.filter(gid=group.id) if j.date >= datetime.date.today()]
+            dates = [date for group in groups for date in models.Date.objects.filter(gid=group.id) if date.date >= datetime.date.today()]
             if not dates:
                 context['date'] = None
             else:

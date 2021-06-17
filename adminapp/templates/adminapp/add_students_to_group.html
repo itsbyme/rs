@@ -1,0 +1,20 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<form class="form-horizontal" method="post" action="{% url 'admin:add_students_to_group' group.id %}">
+    {% csrf_token %}
+    <div>
+        {% for field in form %}
+        <div class="form-group">
+            {{ field }} {{ field.label_tag }}
+        </div>
+        {% endfor %}
+    </div>
+    <input class="btn btn-lg a1 center1" type="submit" value="Сохранить">
+</form>
+<form class="form-horizontal" method="get" action="{% url 'admin:group_update' group.id %}">
+    {% csrf_token %}
+    <input class="btn btn-lg a1 center1" type="submit" value="Отмена">
+</form>
+{% endblock %}

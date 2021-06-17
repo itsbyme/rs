@@ -2,39 +2,63 @@
 {% load static %}
 
 {% block content %}
-{% if upd %}
-	<form class="form-horizontal" method="post" action="{% url 'admin:group_update' pk %}">
-		{% csrf_token %}
-		<div>
-			{% for field in form %}
-			<div class="form-group">
-				{{ field.label_tag }}
-				<div>{{ field }}</div>
+<div>
+	{% if upd %}
+		<form class="form-horizontal" method="post" action="{% url 'admin:group_update' pk %}">
+			{% csrf_token %}
+			<div>
+				{% for field in form %}
+				<div class="form-group">
+					{{ field.label_tag }}
+					<div>{{ field }}</div>
+				</div>
+				{% endfor %}
 			</div>
-			{% endfor %}
-		</div>
-		<input class="btn btn-lg a1 center1" type="submit" value="Сохранить">
-	</form>
-	<form class="form-horizontal" method="post" action="{% url 'admin:group_delete' pk %}">
-		{% csrf_token %}
-		<input class="btn btn-lg a1 center1" type="submit" value="Удалить">
-	</form>
-{% else %}
-	<form class="form-horizontal" method="post" action="{% url 'admin:group_create' %}">
-		{% csrf_token %}
-		<div>
-			{% for field in form %}
-			<div class="form-group">
-				{{ field.label_tag }}
-				<div>{{ field }}</div>
+			<input class="btn btn-lg a1 center1" type="submit" value="Сохранить">
+		</form>
+		<form class="form-horizontal" method="post" action="{% url 'admin:group_delete' pk %}">
+			{% csrf_token %}
+			<input class="btn btn-lg a1 center1" type="submit" value="Удалить">
+		</form>
+	{% else %}
+		<form class="form-horizontal" method="post" action="{% url 'admin:group_create' %}">
+			{% csrf_token %}
+			<div>
+				{% for field in form %}
+				<div class="form-group">
+					{{ field.label_tag }}
+					<div>{{ field }}</div>
+				</div>
+				{% endfor %}
 			</div>
-			{% endfor %}
-		</div>
-		<input class="btn btn-lg a1 center1" type="submit" value="Сохранить">
+			<input class="btn btn-lg a1 center1" type="submit" value="Сохранить">
+		</form>
+	{% endif %}
+	<form class="form-horizontal" method="post" action="{% url 'admin:groups' %}">
+		{% csrf_token %}
+		<input class="btn btn-lg a1 center1" type="submit" value="Отмена">
 	</form>
+</div>
+{%if upd %}
+	<div>
+		<a href="{% url 'admin:add_students_to_group' pk %}">Изменить</a>
+		<table>
+			<caption>Ученики</caption>
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>ФИО</td>
+				</tr>
+			</thead>
+			<tbody>
+				{% for student in students %}
+					<tr>
+						<td>{{ student.id }}</td>
+						<td><a href="{% url 'admin:student_update' student.id %}">{{ student.get_full_name }}</a></td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
 {% endif %}
-<form class="form-horizontal" method="post" action="{% url 'admin:groups' %}">
-	{% csrf_token %}
-	<input class="btn btn-lg a1 center1" type="submit" value="Отмена">
-</form>
 {% endblock %}
