@@ -32,9 +32,9 @@
 		</div>
 		<input class="btn btn-lg a1 center1" type="submit" value="Cохранить">
 	</form>
-	<form class="form-horizontal" method="post" action="{% url 'admin:teachers' %}">
-		{% csrf_token %}
-		<input class="btn btn-lg a1 center1" type="submit" value="Отмена">
-	</form>
 {% endif %}
+<form class="form-horizontal" method="post" action="{% url 'admin:teachers' %}">
+	{% csrf_token %}
+	<input class="btn btn-lg a1 center1" type="submit" value="Отмена">
+</form>
 {% endblock %}
