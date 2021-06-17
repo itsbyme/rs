@@ -2,6 +2,10 @@
 {%load static %}
 
 {% block content %}
+<form class="form-horizontal" method="post" action="{% url 'admin:teacher_create' %}">
+	{% csrf_token %}
+	<input class="btn btn-lg a1 center1" type="submit" value="Добавить">
+</form>
 <table>
 	<tbody>
 		<th> 

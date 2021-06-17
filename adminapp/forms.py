@@ -38,10 +38,11 @@ class ParentForm(forms.ModelForm):
 class TeacherForm(forms.ModelForm):
     class Meta:
         model = Teacher
-        fields = '__all__'
+        fields = fields = ('surname', 'name', 'patronymic', 'phone', 'username', 'password')
     
     def __init__(self, *args, **kwargs):
         super(TeacherForm, self).__init__(*args, **kwargs)
+        self.fields['username'].label = 'Email'
         for field_name, field in self.fields.items():
             field.help_text = ''
-            field.widget.attrs['class'] = 'form-control'
+            field.widget.attrs['class'] = 'form-control col-lg-4'

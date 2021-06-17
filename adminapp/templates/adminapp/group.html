@@ -1,0 +1,40 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+
+{% block content %}
+{% if upd %}
+	<form class="form-horizontal" method="post" action="{% url 'admin:group_update' pk %}">
+		{% csrf_token %}
+		<div>
+			{% for field in form %}
+			<div class="form-group">
+				{{ field.label_tag }}
+				<div>{{ field }}</div>
+			</div>
+			{% endfor %}
+		</div>
+		<input class="btn btn-lg a1 center1" type="submit" value="Сохранить">
+	</form>
+	<form class="form-horizontal" method="post" action="{% url 'admin:group_delete' pk %}">
+		{% csrf_token %}
+		<input class="btn btn-lg a1 center1" type="submit" value="Удалить">
+	</form>
+{% else %}
+	<form class="form-horizontal" method="post" action="{% url 'admin:group_create' %}">
+		{% csrf_token %}
+		<div>
+			{% for field in form %}
+			<div class="form-group">
+				{{ field.label_tag }}
+				<div>{{ field }}</div>
+			</div>
+			{% endfor %}
+		</div>
+		<input class="btn btn-lg a1 center1" type="submit" value="Сохранить">
+	</form>
+	<form class="form-horizontal" method="post" action="{% url 'admin:groups' %}">
+		{% csrf_token %}
+		<input class="btn btn-lg a1 center1" type="submit" value="Отмена">
+	</form>
+{% endif %}
+{% endblock %}

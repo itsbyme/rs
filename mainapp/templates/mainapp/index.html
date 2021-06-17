@@ -10,19 +10,19 @@
 
 {% block content %}
 <div class="container"> 
-  <center>
-    <form class="form-horizontal box" action="{% url 'login' %}" method="post">
-        {% csrf_token %}
-    	<h2 class="header1">Вход</h2>
-		<div>
-			{%for field in login_form %}
-				<div class="form-group">
-					<div>{{ field }}</div>
-				</div>
-			{% endfor %}
-		</div>
-        <input class="btn btn-lg a1 center1" type="submit" value="войти">
-    </form>
+	<center>
+		<form class="form-horizontal box" action="{% url 'login' %}" method="post">
+			{% csrf_token %}
+			<h2 class="header1">Вход</h2>
+			<div>
+				{%for field in login_form %}
+					<div class="form-group">
+						<div>{{ field }}</div>
+					</div>
+				{% endfor %}
+			</div>
+			<input class="btn btn-lg a1 center1" type="submit" value="войти">
+		</form>
     </center>
 </div>
 {% endblock %}
