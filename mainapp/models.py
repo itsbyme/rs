@@ -1,4 +1,5 @@
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 
 from authapp.models import Teacher
 
@@ -9,8 +10,8 @@ class Parent(models.Model):
     surname = models.CharField(verbose_name="Фамилия", max_length=32)
     name = models.CharField(verbose_name="Имя", max_length=32)
     patronymic = models.CharField(verbose_name="Отчество", max_length=32, blank=True)
-    phone = models.CharField(verbose_name="Телефон", max_length=16)
-    email = models.CharField(verbose_name="E-mail", max_length=32, unique = True)
+    phone = PhoneNumberField(verbose_name="Телефон", null=False, blank=False, unique=True, region='RU')
+    email = models.EmailField(verbose_name="E-mail", max_length=128, unique = True)
 
     @property
     def get_full_name(self):
@@ -108,13 +109,12 @@ class Group(models.Model):
     @property
     def get_day(self):
         days = {
-            0: "Пн",
-            1: "Вт",
-            2: "Ср",
-            3: "Чт",
-            4: "Пт",
-            5: "Сб",
-            6: "Вс"
+            1: "Пн",
+            2: "Вт",
+            3: "Ср",
+            4: "Чт",
+            5: "Пт",
+            6: "Сб",
         }
         return days[self.day]
 

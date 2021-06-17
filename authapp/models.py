@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from phonenumber_field.modelfields import PhoneNumberField
 
 from mainapp import models as mainapp
 
@@ -10,7 +11,10 @@ class Teacher(AbstractUser):
     surname = models.CharField(verbose_name="Фамилия", max_length=32)
     name = models.CharField(verbose_name="Имя", max_length=32)
     patronymic = models.CharField(verbose_name="Отчество", blank=True, max_length=32)
-    phone = models.CharField(verbose_name="Телефон", max_length=16)
+    phone = PhoneNumberField(verbose_name="Телефон", null=False, blank=False, unique=True, region='RU', error_messages={
+                                                                                                        'invalid': 'Введите корректный номер, например: +7 999 123-45-67',
+                                                                                                        'reqiered': 'Это поле обязательно!'
+    })
 
     @property
     def get_full_name(self):
