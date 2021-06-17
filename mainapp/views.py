@@ -181,8 +181,11 @@ def marks(request):
 
         if not (time and group):
             groups = models.Group.objects.filter(tid=request.user.id)
-            date = min((j for i in groups for j in models.Date.objects.filter(gid=i.id) 
-                        if j.date >= datetime.date.today()), key=lambda x: x.date)
-            context['date'] = date
-            context['group'] = models.Group.objects.get(id=date.gid.id)
+            dates = [date for group in groups for date in models.Date.objects.filter(gid=group.id) if j.date >= datetime.date.today()]
+            if not dates:
+                context['date'] = None
+            else:
+                date = min(dates, key=lambda x: x.date)
+                context['date'] = date
+                context['group'] = models.Group.objects.get(id=date.gid.id)
     return render(request, 'mainapp/marks.html', context)
