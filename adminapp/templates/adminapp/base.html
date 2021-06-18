@@ -14,11 +14,15 @@
     {% block css %}
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/admin_styles.css' %}">
+        <link rel="preconnect" href="" />
+        <link rel="stylesheet" href="https://259506.selcdn.ru/s.tb.ru/tb/0.1.345/style/styles-core.css" />       
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family&#x3D;Ubuntu&amp;subset&#x3D;all&amp;display&#x3D;swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family&#x3D;Open+Sans&amp;subset&#x3D;all&amp;display&#x3D;swap">
     {% endblock %}
     {% block js %}
     {% endblock %}
 </head>
-<body>
+<body class="sb-body sb-body_with-footer font-ubuntu-opensans sb-content-size_m sb-buttons-border_round">
     {% block header %}
         {% include 'adminapp/include/header.html' %}
     {% endblock %}

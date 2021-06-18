@@ -17,7 +17,7 @@ class StudentForm(forms.ModelForm):
         super(StudentForm, self).__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.help_text = ''
-            field.widget.attrs['class'] = 'form-control'
+            field.widget.attrs['class'] = 'sb-input__field'
             
 class GroupForm(forms.ModelForm):
     class Meta:
@@ -39,7 +39,7 @@ class GroupForm(forms.ModelForm):
         super(GroupForm, self).__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.help_text = ''
-            field.widget.attrs['class'] = 'form-control'
+            field.widget.attrs['class'] = 'sb-input__field'
 
 class ParentForm(forms.ModelForm):
     class Meta:
@@ -50,7 +50,7 @@ class ParentForm(forms.ModelForm):
         super(ParentForm, self).__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.help_text = ''
-            field.widget.attrs['class'] = 'form-control'
+            field.widget.attrs['class'] = 'sb-input__field'
 
 class TeacherForm(UserCreationForm):
     class Meta:
@@ -65,4 +65,4 @@ class TeacherForm(UserCreationForm):
         self.fields['username'].label = 'Email'
         for field_name, field in self.fields.items():
             field.help_text = ''
-            field.widget.attrs['class'] = 'form-control col-lg-4'
+            field.widget.attrs['class'] = 'sb-input__field'

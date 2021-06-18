@@ -2,52 +2,52 @@
 {% load static %}
 
 {% block content %}
-<div>
-	{%if upd %}
-		<form class="form-horizontal" method="post" action="{% url 'admin:student_update' pk %}">
-			{% csrf_token %}
-			<div>
-				{% for field in form %}
-				<div class="form-group">
-					{{ field.label_tag }}
-					<div>{{ field }}</div>
-				</div>
-				{% endfor %}
-			</div>
-			<input class="btn btn-lg a1 center1" type="submit" value="Сохранить">
-		</form>
-		<form class="form-horizontal" method="post" action="{% url 'admin:student_delete' pk %}">
-			{% csrf_token %}
-			<input class="btn btn-lg a1 center1" type="submit" value="Удалить">
-		</form>
-	{% else %}
-		<form class="form-horizontal" method="post" action="{% url 'admin:student_create' %}">
-			{% csrf_token %}
-			<div>
-				{% for field in form %}
-				<div class="form-group">
-					{{ field.label_tag }}
-					<div>{{ field }}</div>
-				</div>
-				{% endfor %}
-			</div>
-			<input class="btn btn-lg a1 center1" type="submit" value="Сохранить">
-		</form>
-	{% endif %}
-	<form class="form-horizontal" method="post" action="{% url 'admin:students' %}">
-		{% csrf_token %}
-		<input class="btn btn-lg a1 center1" type="submit" value="Отмена">
-	</form>
-</div>
-{% if upd %}
+<div class="">
 	<div>
-		<a href="{% url 'admin:add_groups_to_student' pk %}">Изменить</a>
+		<link rel="stylesheet" href="https://259506.selcdn.ru/s.tb.ru/tb/0.1.345/style/blocks/form-type-1.css"/> 
+		<div class="sb-container"></div>
+		{% if upd %}
+			<form class="sb-row sb-m-clear-bottom ml-1 mr-1" method="post" action="{% url 'admin:student_update' pk %}">
+		{% else %}
+			<form class="sb-row sb-m-clear-bottom ml-1 mr-1" method="post" action="{% url 'admin:student_create' %}">
+		{% endif %}	
+		<div class="sb-col_lg-8 sb-col-offset_lg-2 sb-col_md-12 sb-col_sm-12 sb-col_xs-12 sb-text-opacity sb-font-p2"><br><br></div> 
+		{% csrf_token %}
+		{% for field in form %}
+		<div class="sb-col_sm-12 sb-col_xs-12 s-form-type-1__field  sb-col_lg-6 sb-col_md-6 ">  
+			<div class="sb-input s-form-type-1__input" data-validated="true">
+				{{ field.label_tag }}
+				{{ field }}
+			</div>
+		</div>
+		{% endfor %}
+		<input class="btn btn-success ml-4 mt-5" type="submit" value="Сохранить">
+		</form>
+		{% if upd %}
+			<form class="sb-row sb-m-clear-bottom ml-1" method="post" action="{% url 'admin:student_delete' pk %}">
+				{% csrf_token %}
+				<input class="btn btn-danger ml-4 mt-2" type="submit" value="Удалить">
+			</form>
+		{% endif %}
+		<form class="sb-row sb-m-clear-bottom ml-1" method="get" action="{% url 'admin:students' %}">
+			{% csrf_token %}
+			<input class="btn btn-lg ml-4 mt-2" type="submit" value="Отмена">
+		</form>
+	</div>
+	{%if upd %}
+	<div class="centered">
+		<form class="form-horizontal" method="get" action="{% url 'admin:add_groups_to_student' pk %}">
+			{% csrf_token %}
+			<div class="text-right">
+				<input class="btn btn-outline-secondary" type="submit" value="Добавить">
+			</div>
+		</form>
 		<table>
 			<caption>Группы</caption>
 			<thead>
 				<tr>
 					<td>ID</td>
-					<td>Название</td>
+					<td>ФИО</td>
 				</tr>
 			</thead>
 			<tbody>
@@ -60,5 +60,6 @@
 			</tbody>
 		</table>
 	</div>
-{% endif %}
+	{% endif %}
+</div>
 {% endblock %}

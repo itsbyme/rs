@@ -2,30 +2,37 @@
 {%load static %}
 
 {% block content %}
-<form class="form-horizontal" method="post" action="{% url 'admin:teacher_create' %}">
-	{% csrf_token %}
-	<input class="btn btn-lg a1 center1" type="submit" value="Добавить">
-</form>
-<table>
-	<tbody>
-		<th> 
-			<td> 
-				ID
-      		</td>
-			<td>
-				Название
-			</td>
-		</th>
-		{% for teacher in teachers %}
-        <tr> 
-          	<td> 
-				{{ teacher.id }}
-        	</td> 
-			<td>
-				<a href="{% url 'admin:teacher_update' teacher.id %}">{{ teacher.get_full_name }}</a>
-			</td>
-		</tr>
-		{% endfor %}
-	</tbody>
-</table>
+<h1 align="center">Учителя</h1>
+<div class="centered">
+	<form class="form-horizontal" method="post" action="{% url 'admin:teacher_create' %}">
+		{% csrf_token %}
+		<div class="text-right">
+			<input class="btn btn-outline-secondary" type="submit" value="Добавить">
+		</div>
+	</form>
+	<table>
+		<thead>
+			<tr>
+				<td> 
+					ID
+				</td>
+				<td>
+					ФИО
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			{% for teacher in teachers %}
+			<tr> 
+				<td> 
+					{{ teacher.id }}
+				</td> 
+				<td>
+					<a href="{% url 'admin:teacher_update' teacher.id %}">{{ teacher.get_full_name }}</a>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
 {% endblock %}
