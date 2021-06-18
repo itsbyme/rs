@@ -1,20 +1,25 @@
 {% extends 'adminapp/base.html' %}
 {% load static %}
 
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/admin_styles.css' %}">
+{% endblock %}
+
 {% block content %}
-<form class="form-horizontal" method="post" action="{% url 'admin:add_groups_to_student' student.id %}">
+<form class="form-horizontal ml-2" method="post" action="{% url 'admin:add_groups_to_student' student.id %}">
     {% csrf_token %}
     <div>
         {% for field in form %}
         <div class="form-group">
-            {{ field }} {{ field.label_tag }}
+            {{ field.label_tag }} {{ field }}
         </div>
         {% endfor %}
     </div>
-    <input class="btn btn-lg a1 center1" type="submit" value="Сохранить">
+    <input class="btn btn-success" type="submit" value="Сохранить">
 </form>
-<form class="form-horizontal" method="get" action="{% url 'admin:student_update' student.id %}">
+<form class="form-horizontal ml-2" method="get" action="{% url 'admin:student_update' student.id %}">
     {% csrf_token %}
-    <input class="btn btn-lg a1 center1" type="submit" value="Отмена">
+    <input class="btn btn-lg" type="submit" value="Отмена">
 </form>
 {% endblock %}
