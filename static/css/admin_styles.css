@@ -1,12 +1,27 @@
 body {
     background: #e6e6e6;
 }
+
+.color {
+    color: #a9a9a9;
+}
+
 .centered {
     margin: 5% 30%;
     padding: 5px;
     background: #111111;
     border: 1px solid #000;
     border-radius: 10px;
+}
+
+.centered-div {
+    margin: 5% 30%;
+    padding: 5px;
+    background: #111111;
+    border: 1px solid #000;
+    border-radius: 10px;
+    color: #a9a9a9;
+    text-align: center;
 }
 
 .centered table {
@@ -21,6 +36,10 @@ body {
     color: #a9a9a9;
 }
 
-.centered table td a {
+a {
     color: #a9a9a9;
+}
+
+a:hover {
+    color: #fff;
 }

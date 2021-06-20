@@ -7,19 +7,18 @@
 {% endblock %}
 
 {% block content %}
-<form class="form-horizontal ml-2" method="post" action="{% url 'admin:add_groups_to_student' student.id %}">
-    {% csrf_token %}
-    <div>
-        {% for field in form %}
-        <div class="form-group">
-            {{ field.label_tag }} {{ field }}
+<div class="centered-div">
+    <form class="form-horizontal ml-2" method="post" action="{% url 'admin:add_groups_to_student' student.id %}">
+        {% csrf_token %}
+        <div>
+            {% for field in form %}
+            <div class="form-group">
+                {{ field.label_tag }} {{ field }}
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
-    <input class="btn btn-success" type="submit" value="Сохранить">
-</form>
-<form class="form-horizontal ml-2" method="get" action="{% url 'admin:student_update' student.id %}">
-    {% csrf_token %}
-    <input class="btn btn-lg" type="submit" value="Отмена">
-</form>
+        <input class="btn btn-success btn-lg color" type="submit" value="Сохранить">
+        <a href="{% url 'admin:student_update' student.id %}" class="btn btn-danger btn-lg">Отмена</a>
+    </form>
+</div>
 {% endblock %}

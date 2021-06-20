@@ -3,10 +3,10 @@
 
 {% block content %}
 	<h1 align="center">Администрирование</h1>
-	<ul class="navbar">
-		<li><a href="{% url 'admin:groups' %}">Группы</a></li>
-		<li><a href="{% url 'admin:students' %}">Ученики</a></li>
-		<li><a href="{% url 'admin:parents' %}">Родители</a></li>
-		<li><a href="{% url 'admin:teachers' %}">Учителя</a></li>
-	</ul>
+	<div class="centered-div">
+		<p><a href="{% url 'admin:groups' %}">Группы</li></p>
+		<p><a href="{% url 'admin:students' %}">Ученики</li></p>
+		<p><a href="{% url 'admin:parents' %}">Родители</li></p>
+		<p><a href="{% url 'admin:teachers' %}">Учителя</li></p>
+	</div>
 {% endblock %}

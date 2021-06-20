@@ -20,17 +20,11 @@
 		</div>
 	</div>
 	{% endfor %}
-	<input class="btn btn-success ml-4 mt-5" type="submit" value="Сохранить">
-	</form>
+	<input class="btn btn-success btn-lg ml-4 mt-5" type="submit" value="Сохранить">
 	{% if upd %}
-		<form class="sb-row sb-m-clear-bottom ml-1" method="post" action="{% url 'admin:parent_delete' pk %}">
-			{% csrf_token %}
-			<input class="btn btn-danger ml-4 mt-2" type="submit" value="Удалить">
-		</form>
+		<a href="{% url 'admin:parent_delete' pk %}" class="btn btn-danger btn-lg ml-4 mt-5">Удалить</a>
 	{% endif %}
-	<form class="sb-row sb-m-clear-bottom ml-1" method="get" action="{% url 'admin:parents' %}">
-		{% csrf_token %}
-		<input class="btn btn-lg ml-4 mt-2" type="submit" value="Отмена">
+		<a href="{% url 'admin:parents' %}" class="btn btn-lg ml-4 mt-5">Отмена</a>
 	</form>
 </div>
 {% endblock %}
