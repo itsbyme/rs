@@ -33,11 +33,10 @@
 		<form class="form-horizontal" method="get" action="{% url 'admin:add_students_to_group' pk %}">
 			{% csrf_token %}
 			<div class="text-right">
-				<input class="btn btn-outline-secondary" type="submit" value="Добавить">
+				<input class="btn btn-secondary" type="submit" value="Добавить">
 			</div>
 		</form>
 		<table>
-			<caption>Ученики</caption>
 			<thead>
 				<tr>
 					<td>ID</td>

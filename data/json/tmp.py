@@ -25,7 +25,7 @@ for date_num in range(len(dates)):
             continue
         for student in groups[group]:
             
-            status = bool(random.randint(0, 5)) if dt.strptime(dates[date_num]['date'], '%Y-%m-%d') <= dt(2021, 5, 24) else False
+            status = bool(random.randint(0, 5)) if dt.strptime(dates[date_num]['date'], '%Y-%m-%d') <= dt(2021, 6, 21) else False
             
             attendances.append({
                 "did": date_num + 1,

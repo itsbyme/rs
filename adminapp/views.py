@@ -176,9 +176,9 @@ def add_groups_to_student(request, pk):
                     continue
                 key = int(key.replace('group_', ''))
                 add.add(key)
-            
             for pk in add:
                 group = models.Group.objects.get(pk=pk)
+                print(group.max_students, len(group.get_binds))
                 if group.max_students < len(group.get_binds) + 1:
                     return HttpResponseRedirect(reverse('admin:add_groups_to_student', args=[student.id]))
 
@@ -194,7 +194,6 @@ def add_groups_to_student(request, pk):
             for pk in remove:
                 group = get_object_or_404(models.Group, pk=pk)
                 models.Bind.objects.get(sid=student, gid=group).delete()
-            
             return HttpResponseRedirect(reverse('admin:student_update', args=[student.id]))
     else:
         form = type('Form', (djforms.BaseForm,), {'base_fields': {}})
